@@ -1,0 +1,27 @@
+   
+# .github/workflows/nodejs.yml
+name: Support Services CI
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x] # Only run the 14.x build
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Intall and Build
+      run: |
+        npm ci
+        npm run build 

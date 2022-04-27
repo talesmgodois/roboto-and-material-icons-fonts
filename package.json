@@ -4,6 +4,7 @@
   "description": "A simple package providing the Roboto fontface and Material Icons fontface.",
   "main": "css/roboto-fontface.css",
   "scripts": {
+    "build": "echo \"Non JS files\" && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
